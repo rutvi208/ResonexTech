@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Allow writes only to the "submissions" collection
+    match /submissions/{docId} {
+      allow create: if true;   // anyone can submit
+      allow read: if false;    // nobody can read directly
+    }
+
+    // Case Study form submissions
+    match /casestudyform/{docId} {
+      allow create: if true;   // anyone can submit
+      allow read: if false;    // nobody can read directly
+    }
+
+    // KPI form submissions
+    match /kpiform/{docId} {
+      allow create: if true;   // anyone can submit
+      allow read: if false;    // nobody can read directly
+    }
+  }
+}

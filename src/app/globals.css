@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #4D4D4D;
+  --brandcolor: #5800BD;
+  --buttoncolor: #32006C;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@font-face {
+  font-family: 'Uncut Sans';
+  src: url('../fonts/Uncut-Sans-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uncut Bold';
+  src: url('../fonts/Uncut-Sans-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uncut Semibold';
+  src: url('../fonts/Uncut-Sans-Semibold.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uncut Medium';
+  src: url('../fonts/Uncut-Sans-Medium.otf') format('opentype');
+  font-style: normal;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-uncut-bold: 'Uncut Bold', sans-serif;
+  --font-uncut-semibold: 'Uncut Semibold', sans-serif;
+  --font-uncut-medium: 'Uncut Medium', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Uncut Sans, sans-serif;
+  /* font-family: var(--font-uncut-sans); */
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.bold-heading {
+  font-family: var(--font-uncut-bold);
+}
+
+.semibold-text {
+  font-family: var(--font-uncut-semibold);
+}
+
+.medium-text {
+  font-family: var(--font-uncut-medium);
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+/* Case Study cards CSS */
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+   padding: 0 6px;
+  height: auto;
+}
+.slick-slide > div {
+  height: 100%;
+}
+.slick-list {
+  margin: 0; /* remove negative margin */
+}
+/* Hide scrollbar for horizontal scroll on mobile */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* @media (max-width: 639px) {
+  .slick-track { gap: 8px !important; }
+}
+@media (min-width: 640px) {
+  .slick-track { gap: 12px; }
+} */
+
+{/* <button className="px-4 py-1 rounded-full bg-white text-[#222222] text-sm">
+  View Details
+</button> */}
+
+{/* Buttons */}
+{/* <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-3 my-8 lg:my-10 w-full">
+    <button className="flex items-center justify-center gap-1 sm:gap-2 border border-[#D4D4D4] rounded-lg lg:rounded-xl px-0 sm:px-5 py-1.5 text-sm medium-text hover:bg-gray-100">
+        <span className="px-1"><Image src={Sales} alt="Talk to Sales" /></span>Talk to Sales
+    </button>
+    <button className="flex items-center justify-center gap-1 sm:gap-2 border border-[#D4D4D4] rounded-lg lg:rounded-xl px-0 sm:px-5 py-1.5 text-sm medium-text hover:bg-gray-100">
+        <span className="px-1"><Image src={Demo} alt="Request Demo" /></span>Request Demo
+    </button>
+    <button className="flex items-center justify-center gap-1 sm:gap-2 border border-[#D4D4D4] rounded-lg lg:rounded-xl px-0 sm:px-5 py-1.5 text-sm medium-text hover:bg-gray-100">
+        <span className="px-1"><Image src={Team} alt="Join Our Team" /></span>Join Our Team
+    </button>
+    <button className="flex items-center justify-center gap-1 sm:gap-2 border border-[#D4D4D4] rounded-lg lg:rounded-xl px-0 sm:px-5 py-1.5 text-sm medium-text hover:bg-gray-100">
+        <span className="px-1"><Image src={Partner} alt="Partner with Us" /></span>Partner with Us
+    </button>
+</div> */}
+
+/* dots
+// customPaging: (i: number) => (
+        //     <div
+        //         className={`w-3 h-3 my-4 rounded-full transition-all duration-300 ${
+        //         i === currentSlide  ? "bg-[var(--brandcolor)]" : "bg-gray-400"
+        //         }`}
+        //     ></div>
+        // ),
+        // appendDots: (dots: React.ReactNode) => (
+        //     <div>
+        //         <ul>{dots}</ul>
+        //     </div>
+        // ),
+*/
